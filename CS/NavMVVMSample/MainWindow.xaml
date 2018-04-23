@@ -1,0 +1,33 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" 
+        xmlns:local="clr-namespace:NavMVVMSample"
+        x:Class="NavMVVMSample.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Grid>
+
+        <dxn:NavBarControl ItemsSource="{Binding Groups}">
+            <dxn:NavBarControl.ItemStyle>
+                <Style TargetType="dxn:NavBarGroup">
+                    <Setter Property="Header" Value="{Binding Caption}"/>
+                    <Setter Property="ItemsSource" Value="{Binding GroupItems}"/>
+                    <Setter Property="ItemStyle">
+                        <Setter.Value>
+                            <Style TargetType="dxn:NavBarItem">
+                                <Setter Property="Content" Value="{Binding Content}"/>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </dxn:NavBarControl.ItemStyle>
+            <dxn:NavBarControl.View>
+                <dxn:NavigationPaneView/>
+            </dxn:NavBarControl.View>
+        </dxn:NavBarControl>
+
+    </Grid>
+</Window>
