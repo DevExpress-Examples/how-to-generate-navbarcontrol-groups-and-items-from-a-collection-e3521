@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/NavMVVMSample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/NavMVVMSample/MainWindow.xaml))
+* [ViewModel.cs](./CS/NavMVVMSample/ViewModel.cs) (VB: [ViewModel.vb](./VB/NavMVVMSample/ViewModel.vb))
+<!-- default file list end -->
 # How to: Generate NavBarControl Groups and Items from a Collection
 
 
